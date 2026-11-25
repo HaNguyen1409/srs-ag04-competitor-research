@@ -1,0 +1,30 @@
+{
+  "$schema_version": 1,
+  "name": "srs-ag04-competitor-research",
+  "version": "2.0.0",
+  "node_id": "AG-04",
+  "kind": "agent",
+  "summary": "[Bước tuỳ chọn] Agent Node AG-04 (Bước B7 SOP viết SRS): nghiên cứu sản phẩm tương tự/đối thủ qua tìm kiếm web có nguồn, lập hồ sơ tính năng/luồng/mẫu UI (T1/T2/T3) và ánh xạ REQ; làm sạch truy vấn để không lộ thông tin khách hàng. Chấm điểm nguyên.",
+  "repository": "https://github.com/HaNguyen1409/srs-ag04-competitor-research",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": "none (competitor profiles + ui_references)",
+    "sop_steps": [
+      {
+        "step": "7",
+        "title": "(Tuỳ chọn) Nghiên cứu sản phẩm tương tự & đối thủ",
+        "type": "Agent",
+        "receives_from": "B1, B5",
+        "sends_to": "B8, B12"
+      }
+    ]
+  },
+  "upstream": {},
+  "downstream": [
+    "srs-ag05-feature-matrix",
+    "srs-ag07-screen-flow-design"
+  ],
+  "orchestrates": {},
+  "runtime": null
+}
